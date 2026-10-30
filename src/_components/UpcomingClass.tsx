@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Chip from './Chip';
 import { upcomingClassDetails } from '../_constants';
@@ -52,9 +51,6 @@ const ChipWrapper = styled.div`
     }
 `;
 
-const UpcomingClassImage = styled.div`
-    border-radius: 15px;
-`;
 const UpcomingClass = () => {
     return (
         <section className='section_padding bg_yellow'>
