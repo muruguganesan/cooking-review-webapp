@@ -1,0 +1,227 @@
+/* Reset CSS  */
+/* Custom CSS */
+/* Responsive CSS */
+/* Reset CSS  */
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #6b5b4f;
+}
+
+
+/* Custom CSS */
+:root {
+  --default-color: #E67E22;
+}
+.default_color {
+  color: var(--default-color);
+}
+.text {
+  color: #6b5b4f;
+}
+.bg_yellow {
+  background-color: #fff9f2;
+}
+.c {
+  padding-inline: 100px;
+  max-width: 1216px;
+  margin-inline: auto;
+}
+.col {
+  width: 100%;
+}
+.col_2 {
+  width: 50%;
+}
+.col_3 {
+  width: 33.33%;
+}
+.col_4 {
+  width: 25%;
+}
+.logo_wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 600 20px/1 sans-serif;
+}
+.main_header_in,
+.nav_links {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.main_header {
+  padding-block: 20px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  background-color: #fff;
+}
+.wrapper {
+  padding-top: 75px;
+}
+.header_link {
+  font-size: 20px;
+}
+
+/* Cook Your Comfrt */
+.cook_ur_comfrt {
+  background-color: #fff9f2;
+}
+.cook_ur_comfrt_in {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.main_heading {
+  font: 600 45px/1.5 sans-serif;
+}
+.common_btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font: 500 18px/1.5 sans-serif;
+  background-color: #E67E22;
+  transition: background-color 0.5s;
+}
+.cook_ur_comfrt_in p {
+  padding-block: 25px 35px;
+  font-size: 24px;
+}
+.common_btn:hover {
+  background-color: #d67020;
+}
+.cook_comft_img img,
+.upcoming_img_wrap img {
+  border-radius: 15px;
+}
+.section_padding {
+  padding-block: 100px;
+}
+
+
+/* Responsive CSS */
+@media (max-width: 1600px) {
+  .c {
+    padding-inline: 60px;
+  }
+  .section_padding {
+    padding-block: 60px;
+  }
+  .main_heading {
+    font: 600 35px / 1.5 sans-serif;
+  }
+  .cook_ur_comfrt_in p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1400px) {}
+
+@media (max-width: 1200px) {
+  .c {
+    padding-inline: 40px;
+  }
+  .section_padding {
+    padding-block: 40px;
+  }
+  .header_link {
+    font-size: 18px;
+  }
+  .main_header_in,
+  .nav_links {
+    gap: 20px;
+  }
+  .offer_card_icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 900px) {
+  .main_heading {
+    font: 600 30px / 1.5 sans-serif;
+  }
+  .header_link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 740px) {
+  .c {
+    padding-inline: 30px;
+  }
+  .section_padding {
+    padding-block: 30px;
+  }
+  .cook_ur_comfrt_in {
+    flex-wrap: wrap-reverse;
+    gap: 0;
+  }
+  .col_740_1 {
+    width: 100%;
+  }
+  .main_heading {
+    text-align: center;
+    padding-bottom: 15px;
+    font: 600 25px / 1.2 sans-serif;
+  }
+  .cook_ur_comfrt_in p {
+    font-size: 16px;
+    padding-block: 25px;
+    text-align: justify;
+  }
+  .com_btn_wrap {
+    text-align: center;
+  }
+  .common_btn {
+    font: 500 16px / 1.5 sans-serif;
+    padding: 8px 16px;
+  }
+  .nav_links {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_heading {
+    padding-bottom: 10px;
+    font: 600 22px / 1.2 sans-serif;
+  }
+  .main_header {
+    padding-block: 10px;
+  }
+  .logo_wrap {
+    font: 600 18px / 1 sans-serif;
+  }
+  .wrapper {
+    padding-top: 52px;
+  }
+  .cook_ur_comfrt_in p {
+    font-size: 15px;
+  }
+  .logo_wrap svg {
+    width: 28px;
+    height: 28px;
+  }
+}
