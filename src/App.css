@@ -79,6 +79,11 @@ a {
 .header_link {
   font-size: 20px;
 }
+.nav_links.mobile_mnu_link {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
 
 /* Cook Your Comfrt */
 .cook_ur_comfrt {
@@ -115,6 +120,9 @@ a {
 }
 .section_padding {
   padding-block: 100px;
+}
+.mobile_mnu {
+  display: none;
 }
 
 
@@ -200,6 +208,16 @@ a {
   }
   .nav_links {
     display: none;
+  }
+  .main_header_in {
+    align-items: center;
+  }
+  .mobile_mnu {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
   }
 }
 

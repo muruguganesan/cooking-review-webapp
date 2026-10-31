@@ -1,12 +1,25 @@
 import { Link, NavLink } from 'react-router-dom'
-import { UtensilsCrossed } from "lucide-react";
+import { Menu, UtensilsCrossed } from "lucide-react";
 import { headerLinks } from '../_constants';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import Drawer from './Drawer/Drawer';
 
 const Header = () => {
     const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
         color: isActive ? "#E67E22" : "#6b5b4f",
         fontWeight: isActive ? 500 : 400
     });
+    const [openDrawer, setOpenDrawer] = useState(false);
+    const handleDrawerOpen = () => {
+        document.body.style.overflow = "hidden";
+        setOpenDrawer(true)
+    };
+    const handleDrawerClose = () => {
+        document.body.style.overflow = "auto";
+        setOpenDrawer(false);
+    };
+
     return (
         <header className='main_header'>
             <div className="c">
@@ -25,10 +38,33 @@ const Header = () => {
                             headerLinks.map((ele) => { return ele.menuVisibility && <NavLink to={ele.link} style={navLinkStyles} className='header_link'>{ele.label}</NavLink> })
                         }
                     </nav>
+                    {/* <BurgerButton /> */}
+                    <button className="mobile_mnu" onClick={handleDrawerOpen}>
+                        <Menu color="#E67E22" />
+                    </button>
                 </div>
             </div>
+            <Drawer isOpen={openDrawer} onClose={handleDrawerClose}>
+                <nav className="nav_links mobile_mnu_link">
+                    {
+                        headerLinks.map((ele) => { return ele.menuVisibility && <NavLink to={ele.link} style={navLinkStyles} className='header_link' onClick={handleDrawerClose}>{ele.label}</NavLink> })
+                    }
+                </nav>
+            </Drawer>
         </header>
     )
 }
 
-export default Header
+export default Header;
+
+
+// const Drawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+//     if (!isOpen) return null;
+//     return createPortal((
+//         <div className='drawer_wrapper'>
+//             <div className="drawer_cont">
+//                 test
+//             </div>
+//         </div>
+//     ), document.body);
+// };
