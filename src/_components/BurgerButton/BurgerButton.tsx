@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from "./module-css/burger.module.css"
 
 const BurgerButton = () => {

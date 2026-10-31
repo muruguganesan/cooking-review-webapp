@@ -2,7 +2,6 @@ import { Link, NavLink } from 'react-router-dom'
 import { Menu, UtensilsCrossed } from "lucide-react";
 import { headerLinks } from '../_constants';
 import { useState } from 'react';
-import { createPortal } from 'react-dom';
 import Drawer from './Drawer/Drawer';
 
 const Header = () => {

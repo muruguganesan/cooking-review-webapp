@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import styles from "./_module_css/drawer.module.css";
 import type { MouseEvent, ReactNode } from "react";
-import { CircleX, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const Drawer = ({
     isOpen,
